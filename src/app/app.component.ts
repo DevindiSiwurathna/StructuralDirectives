@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StructuralDirectives';
+  isApproved=false
+
+  approve(status:boolean){
+    this.isApproved=status;
+  }
 }
