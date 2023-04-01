@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StructuralDirectives';
-  isApproved=false
+  isApproved=false;
+  luckyNumber=0;
   numbers=[
     'one',
     'two',
@@ -15,7 +16,7 @@ export class AppComponent {
     'four',
     'five',
     'six'
-  ]
+  ];
 
   approve(status:boolean){
     this.isApproved=status;

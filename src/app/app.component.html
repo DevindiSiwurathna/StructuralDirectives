@@ -17,4 +17,28 @@
       <p *ngFor = "let number of numbers; let i=index">{{i+1}}-{{number}}</p>
     </div>
   </div>
+
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="number" name="luckyNumber" [(ngModel)]="luckyNumber">
+    </div>
+    <div class="col-md-12" [ngSwitch]="luckyNumber">
+      <p *ngSwitchCase="1">Strong</p>
+      <p *ngSwitchCase="2">Weak</p>
+      <p *ngSwitchCase="3">Intelligent</p>
+      <p *ngSwitchCase="4">Smart</p>
+      <p *ngSwitchCase="5"> Kind</p>
+      <p *ngSwitchDefault>Enter numbers from 1 to 5</p>
+      
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <p *ngFor = "let number of numbers; let i = index">
+        <span *ngIf="(i+1) %2 ==0">{{i+1}} - {{number}}</span>
+      </p>
+    </div>
+  </div>
 </div>
